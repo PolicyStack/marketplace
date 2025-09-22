@@ -128,10 +128,6 @@ Templates must meet these criteria:
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE.md) file for details.
 
-## 🏆 Contributors
-
-- Asa Moore (@asmoorerh)
-
 ---
 
 **Need help?** Open an [issue](https://github.com/PolicyStack/marketplace/issues)
