@@ -12,7 +12,6 @@ PolicyStack Marketplace is a centralized repository of reusable, versioned, and 
 - ✅ **Production-Ready**: Tested across multiple OpenShift versions
 - ✅ **Versioned**: Semantic versioning with clear upgrade paths
 - ✅ **Documented**: Comprehensive guides with examples
-- ✅ **Compliant**: Aligned with security standards (NIST, CIS, PCI DSS)
 - ✅ **GitOps-Ready**: Designed for ACM and ArgoCD integration
 
 ## 🚀 Quick Start
@@ -36,28 +35,7 @@ policystack info openshift-logging
 
 # Install template
 policystack install openshift-logging --version 1.1.0
-
-# Initialize with template
-policystack init my-cluster --template openshift-logging
 ```
-
-## 🔍 Finding Templates
-
-### By Tags
-
-Search templates by functionality:
-- `production-ready`: Battle-tested in production
-- `gitops`: GitOps-optimized
-- `compliance`: Security standard alignment
-- `multi-tenant`: Multi-tenancy support
-- `ha`: High availability configurations
-
-### By Requirements
-
-Filter by your environment:
-- OpenShift version (4.11, 4.12, 4.13, 4.14)
-- ACM version (2.8, 2.9, 2.10)
-- PolicyStack library version
 
 ## 📋 Template Metadata
 

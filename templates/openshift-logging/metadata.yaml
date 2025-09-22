@@ -2,9 +2,9 @@ name: openshift-logging
 displayName: "OpenShift Logging Stack"
 description: "Production-ready logging stack with OpenShift Logging Operator, ClusterLogging, and log forwarding capabilities"
 author:
-  name: "PolicyStack Team"
-  github: "@policystack"
-  email: "team@policystack.io"
+  name: "Asa Moore"
+  github: "@asamoorerh"
+  email: "asmoore@redhat.com"
 
 # Categories for browsing and filtering
 categories:
@@ -13,7 +13,6 @@ categories:
     - logging
     - monitoring
     - openshift
-    - compliance
 
 # Searchable tags
 tags:

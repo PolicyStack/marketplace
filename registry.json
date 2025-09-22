@@ -1,23 +1,22 @@
 {
   "version": "1.0.0",
-  "generated": "2025-09-22T12:11:31.331603",
+  "generated": "2025-09-22T12:31:08.307533",
   "templates": [
     {
       "name": "openshift-logging",
       "displayName": "OpenShift Logging Stack",
       "description": "Production-ready logging stack with OpenShift Logging Operator, ClusterLogging, and log forwarding capabilities",
       "author": {
-        "name": "PolicyStack Team",
-        "github": "@policystack",
-        "email": "team@policystack.io"
+        "name": "Asa Moore",
+        "github": "@asamoorerh",
+        "email": "asmoore@redhat.com"
       },
       "categories": {
         "primary": "observability",
         "secondary": [
           "logging",
           "monitoring",
-          "openshift",
-          "compliance"
+          "openshift"
         ]
       },
       "tags": [
@@ -109,7 +108,7 @@
     "total_templates": 1,
     "total_versions": 1,
     "authors": [
-      "PolicyStack Team"
+      "Asa Moore"
     ]
   }
 }
