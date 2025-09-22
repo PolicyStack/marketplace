@@ -1,0 +1,72 @@
+version: 1.0.0
+generated: '2025-09-22T08:43:51.337441'
+templates:
+- name: openshift-logging
+  displayName: OpenShift Logging Stack
+  description: Production-ready logging stack with OpenShift Logging Operator, ClusterLogging,
+    and log forwarding capabilities
+  author:
+    name: PolicyStack Team
+    github: '@policystack'
+    email: team@policystack.io
+  categories:
+    primary: observability
+    secondary:
+    - logging
+    - monitoring
+    - openshift
+    - compliance
+  tags:
+  - production-ready
+  - openshift-logging
+  - loki
+  - elasticsearch
+  - log-forwarding
+  - audit-logs
+  - multi-tenant
+  - acm-policy
+  - gitops
+  version:
+    latest: 1.0.0
+    supported:
+    - 1.0.0
+    deprecated: []
+  features: 0
+  requirements:
+    required:
+    - OpenShift Container Platform 4.11+
+    - Red Hat Advanced Cluster Management 2.8+
+    - PolicyStack library chart 1.1.0+
+    optional:
+    - External log storage (Elasticsearch, Loki, Splunk)
+    - Kafka for log streaming
+    - S3-compatible storage for log archives
+  complexity: null
+  path: templates/openshift-logging
+categories:
+  observability:
+  - openshift-logging
+tags:
+  production-ready:
+  - openshift-logging
+  openshift-logging:
+  - openshift-logging
+  loki:
+  - openshift-logging
+  elasticsearch:
+  - openshift-logging
+  log-forwarding:
+  - openshift-logging
+  audit-logs:
+  - openshift-logging
+  multi-tenant:
+  - openshift-logging
+  acm-policy:
+  - openshift-logging
+  gitops:
+  - openshift-logging
+stats:
+  total_templates: 1
+  total_versions: 1
+  authors:
+  - PolicyStack Team
