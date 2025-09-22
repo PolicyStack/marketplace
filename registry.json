@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2025-09-22T08:43:51.337441",
+  "generated": "2025-09-22T12:11:31.331603",
   "templates": [
     {
       "name": "openshift-logging",
@@ -37,6 +37,22 @@
           "1.0.0"
         ],
         "deprecated": []
+      },
+      "versions": {
+        "1.0.0": {
+          "date": "2025-01-01",
+          "policyLibrary": ">=1.1.0",
+          "openshift": ">=4.11.0",
+          "acm": ">=2.8.0",
+          "operatorVersion": "stable-6.0",
+          "changes": [
+            "Initial release with OpenShift Logging Operator",
+            "Basic ClusterLogging resource configuration",
+            "ACM policy integration",
+            "GitOps-ready helm chart structure"
+          ],
+          "breaking": false
+        }
       },
       "features": 0,
       "requirements": {

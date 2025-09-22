@@ -58,6 +58,7 @@ class RegistryBuilder:
                 "categories": metadata.get("categories"),
                 "tags": metadata.get("tags", []),
                 "version": metadata.get("version"),
+                "versions": metadata.get("versions"),
                 "features": len(metadata.get("features", [])),
                 "requirements": metadata.get("requirements"),
                 "complexity": metadata.get("complexity"),
