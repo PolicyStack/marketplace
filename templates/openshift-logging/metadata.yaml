@@ -28,9 +28,10 @@ tags:
 
 # Version information
 version:
-  latest: 1.0.0
+  latest: 1.1.0
   supported:         # Still maintained
     - 1.0.0
+    - 1.1.0
   deprecated: []     # None yet
 
 # Detailed version history
@@ -49,7 +50,7 @@ versions:
     breaking: false
     upgrade: null
   "1.1.0":
-    date: "2025-01-01"
+    date: "2025-01-02"
     policyLibrary: ">=1.1.0"
     openshift: ">=4.11.0"
     acm: ">=2.8.0"

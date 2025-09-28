@@ -1,5 +1,5 @@
 version: 1.0.0
-generated: '2025-09-27T21:06:12.553566'
+generated: '2025-09-27T21:30:20.255890'
 templates:
 - name: openshift-logging
   displayName: OpenShift Logging Stack
@@ -26,9 +26,10 @@ templates:
   - acm-policy
   - gitops
   version:
-    latest: 1.0.0
+    latest: 1.1.0
     supported:
     - 1.0.0
+    - 1.1.0
     deprecated: []
   versions:
     1.0.0:
@@ -45,7 +46,7 @@ templates:
       breaking: false
       upgrade: null
     1.1.0:
-      date: '2025-01-01'
+      date: '2025-01-02'
       policyLibrary: '>=1.1.0'
       openshift: '>=4.11.0'
       acm: '>=2.8.0'
