@@ -47,6 +47,21 @@ versions:
       - "ACM policy integration"
       - "GitOps-ready helm chart structure"
     breaking: false
+    upgrade: null
+  "1.1.0":
+    date: "2025-01-01"
+    policyLibrary: ">=1.1.0"
+    openshift: ">=4.11.0"
+    acm: ">=2.8.0"
+    operatorVersion: "stable-6.0"
+    changes:
+      - "Added test config"
+    breaking: false
+    upgrade:
+      replaces: "1.0.0"
+      skips: []
+      blocks: []
+      requires_migration: false
 
 # Requirements and dependencies
 requirements:
