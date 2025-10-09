@@ -28,10 +28,11 @@ tags:
 
 # Version information
 version:
-  latest: 1.1.0
+  latest: 1.2.0
   supported:         # Still maintained
     - 1.0.0
     - 1.1.0
+    - 1.2.0
   deprecated: []     # None yet
 
 # Detailed version history
@@ -60,6 +61,20 @@ versions:
     breaking: false
     upgrade:
       replaces: "1.0.0"
+      skips: []
+      blocks: []
+      requires_migration: false
+  "1.2.0":
+    date: "2025-10-09"
+    policyLibrary: ">=1.1.0"
+    openshift: ">=4.11.0"
+    acm: ">=2.8.0"
+    operatorVersion: "stable-6.0"
+    changes:
+      - "Added test config"
+    breaking: false
+    upgrade:
+      replaces: "1.1.0"
       skips: []
       blocks: []
       requires_migration: false

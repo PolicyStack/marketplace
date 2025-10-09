@@ -1,5 +1,5 @@
 version: 1.0.0
-generated: '2025-09-27T21:30:20.255890'
+generated: '2025-10-09T11:18:41.992581'
 templates:
 - name: openshift-logging
   displayName: OpenShift Logging Stack
@@ -26,10 +26,11 @@ templates:
   - acm-policy
   - gitops
   version:
-    latest: 1.1.0
+    latest: 1.2.0
     supported:
     - 1.0.0
     - 1.1.0
+    - 1.2.0
     deprecated: []
   versions:
     1.0.0:
@@ -59,6 +60,20 @@ templates:
         skips: []
         blocks: []
         requires_migration: false
+    1.2.0:
+      date: '2025-10-09'
+      policyLibrary: '>=1.1.0'
+      openshift: '>=4.11.0'
+      acm: '>=2.8.0'
+      operatorVersion: stable-6.0
+      changes:
+      - Added test config
+      breaking: false
+      upgrade:
+        replaces: 1.1.0
+        skips: []
+        blocks: []
+        requires_migration: false
   features: 0
   requirements:
     required:
@@ -71,49 +86,9 @@ templates:
     - S3-compatible storage for log archives
   complexity: null
   path: templates/openshift-logging
-- name: test-operator
-  displayName: Test Operator
-  description: Configuration for Test Operator
-  author:
-    name: Asa Moore
-    email: asmoore@redhat.com
-    github: asamoorerh
-  categories:
-    primary: other
-    secondary: []
-  tags:
-  - acm-policy
-  - gitops
-  - other
-  - test-operator
-  version:
-    latest: 1.0.0
-    supported:
-    - 1.0.0
-    deprecated: []
-  versions:
-    1.0.0:
-      date: '2025-09-23'
-      policyLibrary: '>=1.1.0'
-      openshift: '>=4.11.0'
-      acm: '>=2.8.0'
-      changes:
-      - Initial release
-      breaking: false
-  features: 0
-  requirements:
-    required:
-    - OpenShift Container Platform 4.11.0+
-    - Red Hat Advanced Cluster Management 2.8.0+
-    - PolicyStack library chart 1.1.0+
-    optional: []
-  complexity: null
-  path: templates/test-operator
 categories:
   observability:
   - openshift-logging
-  other:
-  - test-operator
 tags:
   production-ready:
   - openshift-logging
@@ -131,16 +106,10 @@ tags:
   - openshift-logging
   acm-policy:
   - openshift-logging
-  - test-operator
   gitops:
   - openshift-logging
-  - test-operator
-  other:
-  - test-operator
-  test-operator:
-  - test-operator
 stats:
-  total_templates: 2
+  total_templates: 1
   total_versions: 3
   authors:
   - Asa Moore
