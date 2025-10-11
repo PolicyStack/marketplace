@@ -1,0 +1,44 @@
+name: dev-spaces
+displayName: Dev Spaces
+description: Configuration for Dev Spaces
+author:
+  name: Asa Moore
+  email: asmoore@redhat.com
+  github: '@asamoorerh'
+categories:
+  primary: other
+  secondary: []
+tags:
+- acm-policy
+- gitops
+- other
+- dev-spaces
+- ide
+- cloud-ide
+- development-environment
+- web-ide
+- dev-workspace
+- devspaces
+- eclipse-che
+- codeready-workspaces
+- workspace
+version:
+  latest: 1.0.0
+  supported:
+  - 1.0.0
+  deprecated: []
+versions:
+  1.0.0:
+    date: '2025-10-11'
+    policyLibrary: '>=1.1.0'
+    openshift: '>=4.11.0'
+    acm: '>=2.8.0'
+    changes:
+    - Initial release
+    breaking: false
+requirements:
+  required:
+  - OpenShift Container Platform 4.11.0+
+  - Red Hat Advanced Cluster Management 2.8.0+
+  - PolicyStack library chart 1.1.0+
+  optional: []

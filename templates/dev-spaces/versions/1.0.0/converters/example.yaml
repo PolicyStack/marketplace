@@ -1,0 +1,9 @@
+# Example converter manifest
+# Replace this with actual Kubernetes resources
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: example-config
+  namespace: '{{ .namespace }}'
+data:
+  key: value
