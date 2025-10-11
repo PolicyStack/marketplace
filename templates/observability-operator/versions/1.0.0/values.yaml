@@ -1,6 +1,6 @@
 stack:
-  # @description: Dev Spaces element
-  devSpaces:
+  # @description: Observability Operator element
+  observabilityOperator:
     # @desc: Master control to enable/disable all policies in this element
     enabled: false
     
@@ -24,11 +24,11 @@ stack:
     
     # @description: Main policy definitions that group related configurations and operators
     policies:
-      # @description: Policy for Dev Spaces
-      - name: dev-spaces-operator-policy
+      # @description: Policy for Observability Operator
+      - name: observability-operator-policy
         enabled: true
         namespace: open-cluster-management
-        description: "Policy for Dev Spaces"
+        description: "Policy for Observability Operator"
         remediationAction: enforce
         severity: low
         disabled: false
@@ -38,13 +38,14 @@ stack:
     
     # @description: Operator policies for managing OpenShift/Kubernetes operators
     operatorPolicies:
-    - name: dev-spaces-operator
+    # @description: OpenShift Cluster Observability Operator for aggregating logs.
+    - name: cluster-observability
       enabled: true
-      description: "Installs the OpenShift devspaces operator"
+      description: "Installs the OpenShift Cluster Observability operator"
       # @desc: Human-friendly display name in OLM
-      displayName: "Red Hat OpenShift Dev Spaces"
-      # @desc: Links to dev-spaces-operator parent policy
-      policyRef: dev-spaces-operator-policy
+      displayName: "Cluster Observability Operator"
+      # @desc: Links to observability-operator parent policy
+      policyRef: observability-operator-policy
       # @desc: Could be a high or medium severity depending on the security requirements.
       severity: low
       # @desc: Automatically install and configure
@@ -52,17 +53,17 @@ stack:
       # @desc: Operator must be present
       complianceType: musthave
       # @desc: Target namespace for operator installation
-      namespace: devspaces
+      namespace: observability-operator
       # @description: Operator group configuration for OLM
       operatorGroup:
         # @desc: Name of the operator group resource
-        name: dev-spaces-group
+        name: observability-operator-group
       # @description: Subscription details for operator catalog
       subscription:
         # @desc: Update channel
         channel: stable
         # @desc: Operator package name in catalog
-        name: devspaces
+        name: cluster-observability-operator
         # @desc: Catalog source name
         source: redhat-operators
         # @desc: Namespace containing the catalog
