@@ -1,6 +1,96 @@
 version: 1.0.0
-generated: '2025-10-09T11:18:41.992581'
+generated: '2025-10-11T12:55:33.318233'
 templates:
+- name: dev-spaces
+  displayName: Dev Spaces
+  description: Configuration for Dev Spaces
+  author:
+    name: Asa Moore
+    email: asmoore@redhat.com
+    github: '@asamoorerh'
+  categories:
+    primary: other
+    secondary: []
+  tags:
+  - acm-policy
+  - gitops
+  - other
+  - dev-spaces
+  - ide
+  - cloud-ide
+  - development-environment
+  - web-ide
+  - dev-workspace
+  - devspaces
+  - eclipse-che
+  - codeready-workspaces
+  - workspace
+  version:
+    latest: 1.0.0
+    supported:
+    - 1.0.0
+    deprecated: []
+  versions:
+    1.0.0:
+      date: '2025-10-11'
+      policyLibrary: '>=1.1.0'
+      openshift: '>=4.11.0'
+      acm: '>=2.8.0'
+      changes:
+      - Initial release
+      breaking: false
+  features: 0
+  requirements:
+    required:
+    - OpenShift Container Platform 4.11.0+
+    - Red Hat Advanced Cluster Management 2.8.0+
+    - PolicyStack library chart 1.1.0+
+    optional: []
+  complexity: null
+  path: templates/dev-spaces
+- name: observability-operator
+  displayName: Observability Operator
+  description: Configuration for Observability Operator
+  author:
+    name: Asa Moore
+    email: asmoore@redhat.com
+    github: '@asamoorerh'
+  categories:
+    primary: observability
+    secondary: []
+  tags:
+  - acm-policy
+  - observability
+  - observability-operator
+  - monitoring
+  - metrics
+  - logging
+  - tracing
+  - openshift
+  - visualization
+  version:
+    latest: 1.0.0
+    supported:
+    - 1.0.0
+    deprecated: []
+  versions:
+    1.0.0:
+      date: '2025-10-11'
+      policyLibrary: '>=1.1.0'
+      openshift: '>=4.11.0'
+      acm: '>=2.8.0'
+      changes:
+      - Initial release
+      breaking: false
+  features: 0
+  requirements:
+    required:
+    - OpenShift Container Platform 4.11.0+
+    - Red Hat Advanced Cluster Management 2.8.0+
+    - PolicyStack library chart 1.1.0+
+    optional: []
+  complexity: null
+  path: templates/observability-operator
 - name: openshift-logging
   displayName: OpenShift Logging Stack
   description: Production-ready logging stack with OpenShift Logging Operator, ClusterLogging,
@@ -88,7 +178,10 @@ templates:
   path: templates/openshift-logging
 categories:
   observability:
+  - observability-operator
   - openshift-logging
+  other:
+  - dev-spaces
 tags:
   production-ready:
   - openshift-logging
@@ -105,11 +198,52 @@ tags:
   multi-tenant:
   - openshift-logging
   acm-policy:
+  - dev-spaces
+  - observability-operator
   - openshift-logging
   gitops:
+  - dev-spaces
   - openshift-logging
+  other:
+  - dev-spaces
+  dev-spaces:
+  - dev-spaces
+  ide:
+  - dev-spaces
+  cloud-ide:
+  - dev-spaces
+  development-environment:
+  - dev-spaces
+  web-ide:
+  - dev-spaces
+  dev-workspace:
+  - dev-spaces
+  devspaces:
+  - dev-spaces
+  eclipse-che:
+  - dev-spaces
+  codeready-workspaces:
+  - dev-spaces
+  workspace:
+  - dev-spaces
+  observability:
+  - observability-operator
+  observability-operator:
+  - observability-operator
+  monitoring:
+  - observability-operator
+  metrics:
+  - observability-operator
+  logging:
+  - observability-operator
+  tracing:
+  - observability-operator
+  openshift:
+  - observability-operator
+  visualization:
+  - observability-operator
 stats:
-  total_templates: 1
-  total_versions: 3
+  total_templates: 3
+  total_versions: 5
   authors:
   - Asa Moore
