@@ -79,6 +79,13 @@ versions:
       blocks: []
       requires_migration: false
 
+dependencies:
+  templates:
+    - name: observability-operator
+      version: ">=1.0.0"
+      required: true
+      reason: "Observability is needed to display captured logs"
+
 # Requirements and dependencies
 requirements:
   required:
