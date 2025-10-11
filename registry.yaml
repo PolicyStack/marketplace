@@ -1,5 +1,5 @@
 version: 1.0.0
-generated: '2025-10-11T12:55:33.318233'
+generated: '2025-10-11T13:34:22.796953'
 templates:
 - name: dev-spaces
   displayName: Dev Spaces
@@ -46,6 +46,7 @@ templates:
     - Red Hat Advanced Cluster Management 2.8.0+
     - PolicyStack library chart 1.1.0+
     optional: []
+  dependencies: null
   complexity: null
   path: templates/dev-spaces
 - name: observability-operator
@@ -89,6 +90,7 @@ templates:
     - Red Hat Advanced Cluster Management 2.8.0+
     - PolicyStack library chart 1.1.0+
     optional: []
+  dependencies: null
   complexity: null
   path: templates/observability-operator
 - name: openshift-logging
@@ -174,6 +176,12 @@ templates:
     - External log storage (Elasticsearch, Loki, Splunk)
     - Kafka for log streaming
     - S3-compatible storage for log archives
+  dependencies:
+    templates:
+    - name: observability-operator
+      version: '>=1.0.0'
+      required: true
+      reason: Observability is needed to display captured logs
   complexity: null
   path: templates/openshift-logging
 categories:

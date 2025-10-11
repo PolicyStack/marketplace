@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2025-10-11T12:55:33.318233",
+  "generated": "2025-10-11T13:34:22.796953",
   "templates": [
     {
       "name": "dev-spaces",
@@ -58,6 +58,7 @@
         ],
         "optional": []
       },
+      "dependencies": null,
       "complexity": null,
       "path": "templates/dev-spaces"
     },
@@ -113,6 +114,7 @@
         ],
         "optional": []
       },
+      "dependencies": null,
       "complexity": null,
       "path": "templates/observability-operator"
     },
@@ -215,6 +217,16 @@
           "External log storage (Elasticsearch, Loki, Splunk)",
           "Kafka for log streaming",
           "S3-compatible storage for log archives"
+        ]
+      },
+      "dependencies": {
+        "templates": [
+          {
+            "name": "observability-operator",
+            "version": ">=1.0.0",
+            "required": true,
+            "reason": "Observability is needed to display captured logs"
+          }
         ]
       },
       "complexity": null,
