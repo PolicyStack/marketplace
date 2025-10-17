@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2025-10-11T13:34:22.796953",
+  "generated": "2025-10-17T16:55:12.319874",
   "templates": [
     {
       "name": "dev-spaces",
@@ -186,6 +186,16 @@
             "skips": [],
             "blocks": [],
             "requires_migration": false
+          },
+          "dependencies": {
+            "templates": [
+              {
+                "name": "observability-operator",
+                "version": ">=1.1.0",
+                "required": true,
+                "reason": "Observability is needed to display captured logs"
+              }
+            ]
           }
         },
         "1.2.0": {
@@ -203,6 +213,16 @@
             "skips": [],
             "blocks": [],
             "requires_migration": false
+          },
+          "dependencies": {
+            "templates": [
+              {
+                "name": "observability-operator",
+                "version": ">=1.0.0",
+                "required": true,
+                "reason": "Observability is needed to display captured logs"
+              }
+            ]
           }
         }
       },
@@ -219,16 +239,7 @@
           "S3-compatible storage for log archives"
         ]
       },
-      "dependencies": {
-        "templates": [
-          {
-            "name": "observability-operator",
-            "version": ">=1.0.0",
-            "required": true,
-            "reason": "Observability is needed to display captured logs"
-          }
-        ]
-      },
+      "dependencies": null,
       "complexity": null,
       "path": "templates/openshift-logging"
     }
@@ -243,6 +254,35 @@
     ]
   },
   "tags": {
+    "acm-policy": [
+      "dev-spaces",
+      "observability-operator",
+      "openshift-logging"
+    ],
+    "observability": [
+      "observability-operator"
+    ],
+    "observability-operator": [
+      "observability-operator"
+    ],
+    "monitoring": [
+      "observability-operator"
+    ],
+    "metrics": [
+      "observability-operator"
+    ],
+    "logging": [
+      "observability-operator"
+    ],
+    "tracing": [
+      "observability-operator"
+    ],
+    "openshift": [
+      "observability-operator"
+    ],
+    "visualization": [
+      "observability-operator"
+    ],
     "production-ready": [
       "openshift-logging"
     ],
@@ -262,11 +302,6 @@
       "openshift-logging"
     ],
     "multi-tenant": [
-      "openshift-logging"
-    ],
-    "acm-policy": [
-      "dev-spaces",
-      "observability-operator",
       "openshift-logging"
     ],
     "gitops": [
@@ -305,30 +340,6 @@
     ],
     "workspace": [
       "dev-spaces"
-    ],
-    "observability": [
-      "observability-operator"
-    ],
-    "observability-operator": [
-      "observability-operator"
-    ],
-    "monitoring": [
-      "observability-operator"
-    ],
-    "metrics": [
-      "observability-operator"
-    ],
-    "logging": [
-      "observability-operator"
-    ],
-    "tracing": [
-      "observability-operator"
-    ],
-    "openshift": [
-      "observability-operator"
-    ],
-    "visualization": [
-      "observability-operator"
     ]
   },
   "stats": {
