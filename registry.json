@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2025-10-17T16:55:12.319874",
+  "generated": "2025-10-17T20:06:54.074454",
   "templates": [
     {
       "name": "dev-spaces",
@@ -58,7 +58,6 @@
         ],
         "optional": []
       },
-      "dependencies": null,
       "complexity": null,
       "path": "templates/dev-spaces"
     },
@@ -114,7 +113,6 @@
         ],
         "optional": []
       },
-      "dependencies": null,
       "complexity": null,
       "path": "templates/observability-operator"
     },
@@ -169,7 +167,17 @@
             "GitOps-ready helm chart structure"
           ],
           "breaking": false,
-          "upgrade": null
+          "upgrade": null,
+          "dependencies": {
+            "templates": [
+              {
+                "name": "observability-operator",
+                "version": ">=1.0.0",
+                "required": true,
+                "reason": "Observability is needed to display captured logs"
+              }
+            ]
+          }
         },
         "1.1.0": {
           "date": "2025-01-02",
@@ -218,7 +226,7 @@
             "templates": [
               {
                 "name": "observability-operator",
-                "version": ">=1.0.0",
+                "version": ">=1.1.0",
                 "required": true,
                 "reason": "Observability is needed to display captured logs"
               }
@@ -239,7 +247,6 @@
           "S3-compatible storage for log archives"
         ]
       },
-      "dependencies": null,
       "complexity": null,
       "path": "templates/openshift-logging"
     }

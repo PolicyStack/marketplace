@@ -61,7 +61,6 @@ class RegistryBuilder:
                 "versions": metadata.get("versions"),
                 "features": len(metadata.get("features", [])),
                 "requirements": metadata.get("requirements"),
-                "dependencies": metadata.get("dependencies"),
                 "complexity": metadata.get("complexity"),
                 "path": f"templates/{metadata.get('name')}"
             }

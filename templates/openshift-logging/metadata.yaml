@@ -50,6 +50,12 @@ versions:
       - "GitOps-ready helm chart structure"
     breaking: false
     upgrade: null
+    dependencies:
+      templates:
+        - name: observability-operator
+          version: ">=1.0.0"
+          required: true
+          reason: "Observability is needed to display captured logs"
   "1.1.0":
     date: "2025-01-02"
     policyLibrary: ">=1.1.0"
@@ -87,7 +93,7 @@ versions:
     dependencies:
       templates:
         - name: observability-operator
-          version: ">=1.0.0"
+          version: ">=1.1.0"
           required: true
           reason: "Observability is needed to display captured logs"
 
